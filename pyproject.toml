@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "traffic-accident-predict"
+version = "0.1.0"
+description = ""
+authors = ["yungen-lu <70182238+yungen-lu@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+numpy = "^1.26.1"
+pandas = "^2.1.2"
+matplotlib = "^3.8.0"
+seaborn = "^0.13.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
