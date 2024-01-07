@@ -71,7 +71,7 @@ F74109032\\
 
 %%%%%%%%% ABSTRACT
 \begin{abstract}
-寫完全部後交給ChatGPT
+This paper addresses the challenge of predicting traffic accident severity, utilizing a dataset covering 1.5 million records across 49 U.S. states from 2016 to 2023. Despite challenges such as missing values and dataset imbalance, the proposed systematic framework involves statistical analysis, preprocessing, and model training. Noteworthy patterns emerge from data visualization, guiding feature reduction strategies. The experiment identifies Random Forest as the top-performing model, with f1-beta scores indicating its effectiveness in handling imbalanced datasets. Future work involves parameter tuning and incorporating external data for enhanced predictive accuracy, contributing to accident prevention and law enforcement resource optimization.
 \end{abstract}
 
 %%%%%%%%% BODY TEXT
@@ -90,7 +90,7 @@ The dataset includes parameters related to the severity classification of accide
 
 \subsection{Difficulty}
 There are three main challenges for this experiment. First, the dataset provider mentioned difficulties with network connectivity, resulting in the inability to guarantee recording all data for every accident. Moreover, missing values will not be updated. Therefore, before using this dataset for training, a thorough examination of the data is necessary. Handling missing values for each kind of field will be a significant challenge in the preprocessing stage.
-The second challenge is that the current dataset provides 47 parameters. Considering all parameters simultaneously may introduce a lot of unnecessary noise. Hence, during the training process, it's crucial to devise a method to eliminate parameters that do not significantly impact accident occurrences. \textcolor{blue}{The third challenge is that the dataset is highly imbalanced, accidents of severity 2 accounts nearly 80 percent of the entire dataset. Addressing such imbalanced dataset demands additional effort during model training, and evaluating models with imbalanced testing dataset necessitates careful consideration.}
+The second challenge is that the current dataset provides 47 parameters. Considering all parameters simultaneously may introduce a lot of unnecessary noise. Hence, during the training process, it's crucial to devise a method to eliminate parameters that do not significantly impact accident occurrences. The third challenge is that the dataset is highly imbalanced, accidents of severity 2 accounts nearly 80 percent of the entire dataset. Addressing such imbalanced dataset demands additional effort during model training, and evaluating models with imbalanced testing dataset necessitates careful consideration.
 
 
 %------------------------------------------------------------------------
@@ -153,6 +153,7 @@ To address the significant class imbalance within our dataset, we explored the e
 \subsection{Result}
 Among the models evaluated, the ensemble method, specifically the Random Forest, outperformed the individual Decision Tree model, achieving a macro average f1-beta score of 0.65 compared to the Decision Tree's score of 0.587. Notably, the One-vs-Rest method with a Decision Tree base model exhibited a significant advantage over the original multiclass Decision Tree model. However, it is noteworthy that the One-vs-Rest method with a Random Forest base did not surpass the performance of the original Random Forest model.
 In terms of boosting methods, XGBoost demonstrated superior performance among all boosting-type models, yielding a commendable score of 0.587. This performance not only surpassed the Decision Tree (0.579) but also stood out within the boosting category. Conversely, models such as SVM and a simple neural network exhibited subpar performance in addressing the challenges posed by the task at hand. These findings emphasize the effectiveness of ensemble methods and specific boosting techniques, while also highlighting the importance of choosing an appropriate base model when employing the One-vs-Rest strategy.
+
 \begin{table}
   \centering
   \begin{tabular}{@{}lc c@{}}
@@ -178,7 +179,7 @@ In terms of boosting methods, XGBoost demonstrated superior performance among al
 The result shows that the highest weighted f-beta score we could get is 0.943, and the highest macro f-beta score we could get is 0.65, both results is achieved by Random Forest. Since our experiments uses default parameters for almost each models, this might indicate that the default parameters for Random Forest preform well on the dataset, but others might perform better if we tweak the parameters to better fit our datasets. In the future, we hope to tweak the parameters for each models to get the best result. Additionally, we plan to enhance prediction accuracy by incorporating external data, such as road-specific speed limits and traffic volume information. This approach aims to refine our models and further improve their performance on the given dataset.
 
 \section{Conclusion}
-寫完全部後交給ChatGPT
+In conclusion, this paper addresses the issue of traffic accidents, aiming to predict severity based on diverse environmental conditions. Despite challenges such as missing values and dataset imbalance, the systematic framework encompasses thorough data preprocessing, visualization, and feature reduction. The experiment, employing f1-beta scores, reveals the Random Forest method as the top-performing model, effectively handling the imbalanced dataset. The feature work suggests potential improvements through parameter tweaking and integration of external data, enhancing prediction accuracy. This research establishes a foundation for accident prevention, providing valuable insights for law enforcement resource optimization. Future efforts will focus on refining models and incorporating additional data sources to further enhance the predictive capabilities.
 
 %%%%%%%%% REFERENCES
 {\small
