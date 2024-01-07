@@ -148,8 +148,6 @@ We anticipate that the experiment will identify several significant factors high
 In this study, we employed the f1-beta-score as our evaluation metric. Acknowledging the varying significance of precision and recall across four severity levels, we adopted distinct beta values—0.5, 1, 1, and 2 for levels 1 through 4, respectively. Following the computation of the f1-beta score for each severity level, we employed both macro and weighted averages to derive the conclusive evaluation scores. This comprehensive approach accounts for the nuanced importance of precision and recall in different severity contexts, providing a robust assessment of our model's performance.
 
 \subsection{Experiment with different models}
-Certainly, here's an improved version for your next paragraph:
-
 To address the significant class imbalance within our dataset, we explored the efficacy of tree-based models and various boosting methods as potential solutions. In addition to the conventional Decision Tree model, we experimented with the One-vs-Rest (OnVsRest) approach. This involved training individual binary classifiers for each severity level, as opposed to a single multi-class classifier. The diverse set of candidate models was rigorously tested using our designated testing dataset, and the performance of each model was evaluated using the aforementioned metrics. This methodology allowed us to assess the models' capabilities in handling imbalanced data while providing insights into their suitability for the task at hand.
 
 \subsection{Result}
