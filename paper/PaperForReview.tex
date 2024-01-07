@@ -145,13 +145,18 @@ We anticipate that the experiment will identify several significant factors high
 \section{Experiment}
 
 \subsection{Evaluation method}
-TODO
+Certainly, I can help you refine the description of your experiment. Here's an improved version:
+
+In this study, we employed the f1-beta-score as our evaluation metric. Acknowledging the varying significance of precision and recall across four severity levels, we adopted distinct beta values—0.5, 1, 1, and 2 for levels 1 through 4, respectively. Following the computation of the f1-beta score for each severity level, we employed both macro and weighted averages to derive the conclusive evaluation scores. This comprehensive approach accounts for the nuanced importance of precision and recall in different severity contexts, providing a robust assessment of our model's performance.
 
 \subsection{Experiment with different models}
-TODO
+Certainly, here's an improved version for your next paragraph:
+
+To address the significant class imbalance within our dataset, we explored the efficacy of tree-based models and various boosting methods as potential solutions. In addition to the conventional Decision Tree model, we experimented with the One-vs-Rest (OnVsRest) approach. This involved training individual binary classifiers for each severity level, as opposed to a single multi-class classifier. The diverse set of candidate models was rigorously tested using our designated testing dataset, and the performance of each model was evaluated using the aforementioned metrics. This methodology allowed us to assess the models' capabilities in handling imbalanced data while providing insights into their suitability for the task at hand.
 
 \subsection{Result}
-TODO
+Among the models evaluated, the ensemble method, specifically the Random Forest, outperformed the individual Decision Tree model, achieving a macro average f1-beta score of 0.65 compared to the Decision Tree's score of 0.587. Notably, the One-vs-Rest method with a Decision Tree base model exhibited a significant advantage over the original multiclass Decision Tree model. However, it is noteworthy that the One-vs-Rest method with a Random Forest base did not surpass the performance of the original Random Forest model.
+In terms of boosting methods, XGBoost demonstrated superior performance among all boosting-type models, yielding a commendable score of 0.587. This performance not only surpassed the Decision Tree (0.579) but also stood out within the boosting category. Conversely, models such as SVM and a simple neural network exhibited subpar performance in addressing the challenges posed by the task at hand. These findings emphasize the effectiveness of ensemble methods and specific boosting techniques, while also highlighting the importance of choosing an appropriate base model when employing the One-vs-Rest strategy.
 \begin{table}
   \centering
   \begin{tabular}{@{}lc c@{}}
